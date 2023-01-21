@@ -7,7 +7,7 @@ import { AnimatePresence } from "framer-motion";
 import { BrowserRouter } from "react-router-dom";
 
 import customTheme from "./theme/index";
-import "@fontsource/roboto-mono/700.css";
+import "@fontsource/roboto-mono/400.css";
 import "@fontsource/poppins/700.css";
 import "@fontsource/chelsea-market/400.css";
 

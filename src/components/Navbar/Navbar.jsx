@@ -22,6 +22,10 @@ const Navbar = props => {
 
   const buttons = [
     {
+      name: "home",
+      link: "",
+    },
+    {
       name: "about",
       link: "about",
     },
@@ -53,13 +57,10 @@ const Navbar = props => {
       <IconButton
         aria-label="Open Menu"
         fontSize="xx-large"
-        mr={2}
         icon={<HamburgerIcon />}
         onClick={() => changeDisplay("flex")}
         display={["flex", "flex", "flex", "none"]}
         position="fixed"
-        top="7"
-        left="7"
       />
       <Spacer />
       <IconButton

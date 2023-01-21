@@ -14,7 +14,7 @@ export const NavLink = props => {
         aria-label="Home"
         w="100%"
         fontSize="lg"
-        mx={5}
+        mx={4}
         _after={{
           content: '""',
           position: "absolute",

@@ -1266,12 +1266,26 @@
     compute-scroll-into-view "1.0.14"
     copy-to-clipboard "3.3.1"
 
+"@chakra-ui/icon@3.0.15":
+  version "3.0.15"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/icon/-/icon-3.0.15.tgz#589adf65550b2ef07342a064376adcf64331606c"
+  integrity sha512-6RRppml4kW3hOMgMCtgeKc73nJhJEZXOvzDvmZKKW9WrLsDpWiI7WDQb5VIxUXqZlbrh88K5WVRY0YivIefCDA==
+  dependencies:
+    "@chakra-ui/shared-utils" "2.0.4"
+
 "@chakra-ui/icon@3.0.16":
   version "3.0.16"
   resolved "https://registry.yarnpkg.com/@chakra-ui/icon/-/icon-3.0.16.tgz#6413ec637c0c3acc204301485f05451b5bcd6ba4"
   integrity sha512-RpA1X5Ptz8Mt39HSyEIW1wxAz2AXyf9H0JJ5HVx/dBdMZaGMDJ0HyyPBVci0m4RCoJuyG1HHG/DXJaVfUTVAeg==
   dependencies:
     "@chakra-ui/shared-utils" "2.0.5"
+
+"@chakra-ui/icons@^2.0.16":
+  version "2.0.16"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/icons/-/icons-2.0.16.tgz#5601acad2cf72f3692dca71c3c70cf9903c59f64"
+  integrity sha512-8sNMpkA4t0EOYuAZONgvMYaIO8vHyf9kBkHCk/2SRW+KXZKY0Q0aWJMxFW047r9GBUJmzvsu2wdrmOv3KMGzPA==
+  dependencies:
+    "@chakra-ui/icon" "3.0.15"
 
 "@chakra-ui/image@2.0.15":
   version "2.0.15"
@@ -1669,6 +1683,11 @@
   dependencies:
     "@chakra-ui/form-control" "2.0.17"
     "@chakra-ui/shared-utils" "2.0.5"
+
+"@chakra-ui/shared-utils@2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/shared-utils/-/shared-utils-2.0.4.tgz#8661f2b48dd93d04151b10a894a4290c9d9a080c"
+  integrity sha512-JGWr+BBj3PXGZQ2gxbKSD1wYjESbYsZjkCeE2nevyVk4rN3amV1wQzCnBAhsuJktMaZD6KC/lteo9ou9QUDzpA==
 
 "@chakra-ui/shared-utils@2.0.5":
   version "2.0.5"
@@ -2109,6 +2128,21 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@fontsource/chelsea-market@^4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/chelsea-market/-/chelsea-market-4.5.10.tgz#f00aad7247168c3837fb05652d2e81fe15335e6b"
+  integrity sha512-KjK4252dymuJo5373PiI+Ptma9k+Kcr9yi57UG69ITvcgMmcvp0G/ebYEYjfIZk7CGGBWdBU9OQJzXWm35rrIQ==
+
+"@fontsource/poppins@^4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/poppins/-/poppins-4.5.10.tgz#44dbfeacb5d89efca5ad7ad6cc941b2ac1ee424b"
+  integrity sha512-oYZVHsnlwV3VWM1SE/m6SUxVh0QLk5+2wB+lBiXcI7N/0KVQWmV9YykaPqfJHBLvmdya+MAOnv+BQHeLU1vOOw==
+
+"@fontsource/roboto-mono@^4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/roboto-mono/-/roboto-mono-4.5.10.tgz#197fc2d5fa9c25fd7ad9dcccb2705663f2409850"
+  integrity sha512-KrJdmkqz6DszT2wV/bbhXef4r0hV3B0vw2mAqei8A2kRnvq+gcJLmmIeQ94vu9VEXrUQzos5M9lH1TAAXpRphw==
+
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.8.tgz#03595ac2075a4dc0f191cc2131de14fbd7d410b9"
@@ -2533,6 +2567,11 @@
   version "2.11.6"
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.6.tgz#cee20bd55e68a1720bdab363ecf0c821ded4cd45"
   integrity sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==
+
+"@remix-run/router@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.3.0.tgz#b6ee542c7f087b73b3d8215b9bf799f648be71cb"
+  integrity sha512-nwQoYb3m4DDpHTeOwpJEuDt8lWVcujhYYSFGLluC+9es2PyLjm+jjq3IeRBQbwBtPLJE/lkuHuGHr8uQLgmJRA==
 
 "@rollup/plugin-babel@^5.2.0":
   version "5.3.1"
@@ -8628,6 +8667,21 @@ react-remove-scroll@^2.5.5:
     tslib "^2.1.0"
     use-callback-ref "^1.3.0"
     use-sidecar "^1.1.2"
+
+react-router-dom@^6.7.0:
+  version "6.7.0"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.7.0.tgz#0249f4ca4eb704562b8b0ff29caeb928c3a6ed38"
+  integrity sha512-jQtXUJyhso3kFw430+0SPCbmCmY1/kJv8iRffGHwHy3CkoomGxeYzMkmeSPYo6Egzh3FKJZRAL22yg5p2tXtfg==
+  dependencies:
+    "@remix-run/router" "1.3.0"
+    react-router "6.7.0"
+
+react-router@6.7.0:
+  version "6.7.0"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.7.0.tgz#db262684c13b5c2970694084ae9e8531718a0681"
+  integrity sha512-KNWlG622ddq29MAM159uUsNMdbX8USruoKnwMMQcs/QWZgFUayICSn2oB7reHce1zPj6CG18kfkZIunSSRyGHg==
+  dependencies:
+    "@remix-run/router" "1.3.0"
 
 react-scripts@5.0.1:
   version "5.0.1"

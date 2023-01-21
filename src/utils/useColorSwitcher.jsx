@@ -8,7 +8,18 @@ const useColorSwitcher = () => {
 
   const secondary = useColorModeValue("purple.500", "teal.200");
 
-  return { colorLight, colorDark, hoverLight, hoverDark, secondary };
+  const greyBg = useColorModeValue("neutral.300", "neutral.500");
+  const lightGreyBg = useColorModeValue("neutral.100", "neutral.700");
+
+  return {
+    colorLight,
+    colorDark,
+    hoverLight,
+    hoverDark,
+    secondary,
+    greyBg,
+    lightGreyBg,
+  };
 };
 
 export default useColorSwitcher;

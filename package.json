@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.16",
     "@chakra-ui/react": "^2.4.9",
     "@emotion/react": "^11.0.0",
     "@emotion/styled": "^11.0.0",
+    "@fontsource/chelsea-market": "^4.5.10",
+    "@fontsource/poppins": "^4.5.10",
+    "@fontsource/roboto-mono": "^4.5.10",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.0.1",
     "@testing-library/user-event": "^14.1.0",
@@ -13,6 +17,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^3.0.0",
+    "react-router-dom": "^6.7.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },

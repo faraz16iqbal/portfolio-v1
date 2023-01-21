@@ -12,7 +12,6 @@ export const StyledButton = ({
   colorScheme,
   border,
   variant = "solid",
-  //
   children,
   ...props
 }) => {

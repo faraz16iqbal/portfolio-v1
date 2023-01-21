@@ -13,6 +13,19 @@ export const Heading1 = ({ children, ...props }) => {
     </Heading>
   );
 };
+
+export const Heading2 = ({ children, ...props }) => {
+  return (
+    <Heading
+      as="h2"
+      fontSize={{ base: "2.5em", md: "4em", lg: "5em" }}
+      {...props}
+    >
+      {children}
+    </Heading>
+  );
+};
+
 export const Heading3 = ({ big = false, color, children, ...props }) => {
   let fontSize;
   if (big) {
