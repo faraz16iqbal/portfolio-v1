@@ -56,3 +56,11 @@ export const Body = ({ children, ...props }) => {
     </Text>
   );
 };
+
+export const TextLarge = ({ color, children, ...props }) => {
+  return (
+    <Text {...props} color={color} fontSize={{ base: "1em", md: "1.25em" }}>
+      {children}
+    </Text>
+  );
+};

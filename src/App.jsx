@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { Route, Routes } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import About from "./pages/About";
+import Skills from "./pages/Skills";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />}></Route>
           <Route path="/about" element={<About />}></Route>
+          <Route path="/skills" element={<Skills />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
         </Routes>
       </Container>
     </motion.div>

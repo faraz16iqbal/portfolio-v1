@@ -67,7 +67,6 @@ const Navbar = props => {
         icon={<HamburgerIcon />}
         onClick={() => changeDisplay("flex")}
         display={["flex", "flex", "flex", "none"]}
-        position="fixed"
       />
       <Spacer />
       <IconButton
