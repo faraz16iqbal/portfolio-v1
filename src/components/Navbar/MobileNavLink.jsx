@@ -7,12 +7,12 @@ const MobileNavLink = props => {
   const { colorDark, secondary } = useColorSwitcher();
 
   return (
-    <Link to={`/${props.link}`}>
+    <Link to={`/${props.link}`} {...props}>
       <Button
         as="a"
         variant="ghost"
         aria-label="Contact"
-        my={5}
+        my={3}
         w="100%"
         color={colorDark}
         fontSize="lg"

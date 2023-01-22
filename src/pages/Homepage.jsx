@@ -17,14 +17,14 @@ const Homepage = () => {
       transition={{ duration: 1.5, ease: "easeIn" }}
       exit={{ opacity: 0 }}
     >
-      <Box as="div" mt="12em">
-        <Flex>
+      <Box as="div" mt={{ base: "4em", md: "8em" }}>
+        <Flex justifyContent="center">
           <Box as="section" w="100%" textAlign={{ base: "center", md: "left" }}>
             <Flex
               flexDir="column"
               justifyContent="space-around"
-              h={{ base: "500", lg: "400" }}
-              alignItems={{ sm: "center", md: "flex-start" }}
+              h={{ base: "500", lg: "500" }}
+              alignItems={{ sm: "center", lg: "flex-start" }}
             >
               <Text
                 color={colorDark}

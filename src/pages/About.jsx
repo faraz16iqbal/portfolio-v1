@@ -25,8 +25,8 @@ const About = () => {
         </Box>
         <Stack
           align="center"
-          spacing={32}
-          direction={{ base: "column-reverse", xl: "row" }}
+          spacing={{ sm: "10", md: "32" }}
+          direction={{ base: "column", xl: "row" }}
           justify={{ base: "space-between", xl: "space-evenly" }}
         >
           <Box
@@ -46,8 +46,8 @@ const About = () => {
               <ProfileImage />
             </Box>
           </Box>
-          <Stack spacing={12} p="8px" w={{ base: "100%", xl: "50%" }}>
-            <Body mb="2em">
+          <Stack spacing={{ sm: "8" }} p="8px" w={{ base: "100%", xl: "50%" }}>
+            <Body mb="2em" textAlign={{ sm: "center", md: "justify" }}>
               Hello! I'm Faraz, a full-stack developer based in New Delhi,
               India. I love to work on exciting projects that test what I've
               learnt, whilst being exposed to the power and potential of the

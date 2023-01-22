@@ -12,13 +12,20 @@ import { FaMoon } from "react-icons/fa";
 import useColorSwitcher from "../../utils/useColorSwitcher";
 import { NavLink } from "./NavLink";
 import MobileNavLink from "./MobileNavLink";
+import { useEffect } from "react";
 
 const Navbar = props => {
   const text = useColorModeValue("dark", "light");
   const SwitchIcon = useColorModeValue(FaMoon, SunIcon);
   const { toggleColorMode } = useColorMode();
   const [display, changeDisplay] = useState("none");
-  const { colorLight } = useColorSwitcher();
+  const [clicked, setClicked] = useState("false");
+  const { lightGreyBg } = useColorSwitcher();
+
+  useEffect(() => {
+    console.log("here");
+    changeDisplay("none");
+  }, [clicked]);
 
   const buttons = [
     {
@@ -73,15 +80,13 @@ const Navbar = props => {
         {...props}
       />
 
-      {/* Mobile */}
-
       {/* Mobile Content */}
       <Flex
         w="100vw"
         display={display}
-        bgColor={colorLight}
+        bgColor={lightGreyBg}
         zIndex={20}
-        h="100vh"
+        h="50vh"
         pos="fixed"
         top="0"
         left="0"
@@ -101,7 +106,14 @@ const Navbar = props => {
 
         <Flex flexDir="column" align="center">
           {buttons.map((b, id) => {
-            return <MobileNavLink name={b.name} link={b.link} key={id} />;
+            return (
+              <MobileNavLink
+                name={b.name}
+                link={b.link}
+                key={id}
+                onClick={() => setClicked(prev => prev ^ 1)}
+              />
+            );
           })}
         </Flex>
       </Flex>
