@@ -1,12 +1,15 @@
 import React from "react";
-import Navbar from "./components/Navbar/Navbar";
 import { Container } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Route, Routes } from "react-router-dom";
+
 import Homepage from "./pages/Homepage";
 import About from "./pages/About";
 import Skills from "./pages/Skills";
+import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
@@ -22,6 +25,7 @@ function App() {
           <Route path="/" element={<Homepage />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/skills" element={<Skills />}></Route>
+          <Route path="/projects" element={<Projects />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
         </Routes>
       </Container>
