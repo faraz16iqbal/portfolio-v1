@@ -62,3 +62,28 @@ export const PrimaryButton = ({
     </StyledButton>
   );
 };
+
+export const SecondaryButton = ({
+  children,
+  theme,
+  w = "188px",
+  h = "56px",
+  size = { base: "sm", sm: "md" },
+  ...props
+}) => {
+  const { colorLight, colorDark, hoverDark } = useColorSwitcher();
+  return (
+    <StyledButton
+      {...props}
+      w={w}
+      h={h}
+      size={size}
+      bg={colorDark}
+      color={colorLight}
+      hoverBg={hoverDark}
+      children="Primary"
+    >
+      {children}
+    </StyledButton>
+  );
+};

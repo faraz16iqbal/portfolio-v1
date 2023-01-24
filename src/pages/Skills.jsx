@@ -66,21 +66,48 @@ const Skills = ({ ...props }) => {
 const Languages = () => {
   return (
     <>
-      <IconBox icon={IconC} name="C++" />
-      <IconBox icon={IconJS} name="JavaScript" />
-      <IconBox icon={IconPython} name="Python" />
-      <IconBox icon={IconGo} name="Golang" />
-      {/* <IconBox icon={IconReact} name="React" /> */}
+      <IconBox icon={IconC} name="C++" size={{ base: "3em", xl: "5.5em" }} />
+      <IconBox
+        icon={IconJS}
+        name="JavaScript"
+        size={{ base: "3em", xl: "5.5em" }}
+      />
+      <IconBox
+        icon={IconPython}
+        name="Python"
+        size={{ base: "3em", xl: "5.5em" }}
+      />
+      <IconBox
+        icon={IconGo}
+        name="Golang"
+        size={{ base: "3em", xl: "5.5em" }}
+      />
     </>
   );
 };
 const Frameworks = () => {
   return (
     <>
-      <IconBox icon={IconNode} name="NodeJS" />
-      <IconBox icon={IconReact} name="React" />
-      <IconBox icon={IconMongo} name="MongoDB" />
-      <IconBox icon={IconFB} name="Firebase" />
+      <IconBox
+        icon={IconNode}
+        name="NodeJS"
+        size={{ base: "3em", xl: "5.5em" }}
+      />
+      <IconBox
+        icon={IconReact}
+        name="React"
+        size={{ base: "3em", xl: "5.5em" }}
+      />
+      <IconBox
+        icon={IconMongo}
+        name="MongoDB"
+        size={{ base: "3em", xl: "5.5em" }}
+      />
+      <IconBox
+        icon={IconFB}
+        name="Firebase"
+        size={{ base: "3em", xl: "5.5em" }}
+      />
     </>
   );
 };
@@ -88,10 +115,22 @@ const Frameworks = () => {
 const Tools = () => {
   return (
     <>
-      <IconBox icon={IconPostman} name="Postman" />
-      <IconBox icon={IconGit} name="Git" />
-      <IconBox icon={IconDocker} name="Docker" />
-      <IconBox icon={IconFigma} name="Figma" />
+      <IconBox
+        icon={IconPostman}
+        name="Postman"
+        size={{ base: "3em", xl: "5.5em" }}
+      />
+      <IconBox icon={IconGit} name="Git" size={{ base: "3em", xl: "5.5em" }} />
+      <IconBox
+        icon={IconDocker}
+        name="Docker"
+        size={{ base: "3em", xl: "5.5em" }}
+      />
+      <IconBox
+        icon={IconFigma}
+        name="Figma"
+        size={{ base: "3em", xl: "5.5em" }}
+      />
     </>
   );
 };
