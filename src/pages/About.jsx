@@ -14,7 +14,7 @@ const About = () => {
     <motion.div
       initial={{ y: "100%", opacity: 0 }}
       animate={{ y: "0%", opacity: 1 }}
-      transition={{ duration: 1, ease: "easeInOut" }}
+      transition={{ duration: 0.75, ease: "easeInOut" }}
       exit={{ opacity: 0 }}
     >
       <Box as="section" outline="0" tabIndex={-1} w="100%" my="4em">

@@ -14,7 +14,7 @@ const Homepage = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1.5, ease: "easeInOut" }}
+      transition={{ duration: 1, ease: "easeInOut" }}
       exit={{ opacity: 0 }}
     >
       <Box as="div" mt={{ base: "4em", md: "8em" }}>

@@ -21,8 +21,8 @@ export const ProjectInfoCard = ({
 }) => {
   return (
     <Stack
-      maxW={{ xxl: "40%" }}
-      spacing={{ base: 8, xxl: 0 }}
+      maxW={{ lg: "80%" }}
+      spacing={{ base: 8, xl: 0 }}
       justify="space-between"
       p="1em"
       {...props}
@@ -43,25 +43,23 @@ export const ProjectInfoCard = ({
           </Stack>
         )}
       </Stack>
-      {live !== null && repo !== null && (
-        <Stack
-          justify={!live && { md: "center", xl: "left" }}
-          align="center"
-          spacing={8}
-          direction={{ base: "column", md: "row" }}
-        >
-          {live !== null && (
-            <PrimaryButton w="100%" as="a" href={live}>
-              LIVE SITE
-            </PrimaryButton>
-          )}
-          {repo !== null && (
-            <SecondaryButton w="100%" as="a" href={repo}>
-              GITHUB REPO
-            </SecondaryButton>
-          )}
-        </Stack>
-      )}
+      <Stack
+        justify={!live && { md: "center", xl: "left" }}
+        align="center"
+        spacing={8}
+        direction={{ base: "column", md: "row" }}
+      >
+        {live !== null && (
+          <PrimaryButton w="100%" as="a" href={live} target="_blank">
+            LIVE SITE
+          </PrimaryButton>
+        )}
+        {repo !== null && (
+          <SecondaryButton w="100%" as="a" href={repo} target="_blank">
+            GITHUB REPO
+          </SecondaryButton>
+        )}
+      </Stack>
     </Stack>
   );
 };

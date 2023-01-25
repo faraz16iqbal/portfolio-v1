@@ -25,10 +25,10 @@ const Skills = ({ ...props }) => {
     <motion.div
       initial={{ y: "100%", opacity: 0 }}
       animate={{ y: "0%", opacity: 1 }}
-      transition={{ duration: 1, ease: "easeInOut" }}
+      transition={{ duration: 0.75, ease: "easeInOut" }}
       exit={{ opacity: 0 }}
     >
-      <Box as="section" outline="0" tabIndex={-1} {...props} my="4">
+      <Box as="section" outline="0" tabIndex={-1} {...props} my="4em">
         <Box mb="50px">
           <SectionHeader mr="16px">
             <Heading2>skills</Heading2>

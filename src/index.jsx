@@ -3,7 +3,6 @@ import App from "./App";
 import * as ReactDOM from "react-dom/client";
 
 import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
-import { AnimatePresence } from "framer-motion";
 import { BrowserRouter } from "react-router-dom";
 
 import customTheme from "./theme/index";
@@ -16,13 +15,11 @@ const root = ReactDOM.createRoot(container);
 
 root.render(
   <StrictMode>
-    <AnimatePresence>
-      <ChakraProvider theme={customTheme}>
-        <ColorModeScript />
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </ChakraProvider>
-    </AnimatePresence>
+    <ChakraProvider theme={customTheme}>
+      <ColorModeScript />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ChakraProvider>
   </StrictMode>
 );
