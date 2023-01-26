@@ -22,6 +22,7 @@ const Projects = ({ ...props }) => {
         mx="auto"
         my="4em"
         {...props}
+        px={{ base: "0", md: "20", xl: "0" }}
       >
         <Box mb="128px">
           <SectionHeader mr="16px">

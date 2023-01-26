@@ -22,7 +22,14 @@ const Contact = ({ ...props }) => {
       transition={{ duration: 0.75, ease: "easeInOut" }}
       exit={{ opacity: 0 }}
     >
-      <Box as="section" outline="0" tabIndex={-1} my="4em" {...props}>
+      <Box
+        as="section"
+        outline="0"
+        tabIndex={-1}
+        my="4em"
+        {...props}
+        px={{ base: "0", md: "20", xl: "0" }}
+      >
         <Box mb="72px">
           <SectionHeader mr="16px">
             <Heading2>contact</Heading2>
