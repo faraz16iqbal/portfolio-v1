@@ -28,7 +28,14 @@ const Skills = ({ ...props }) => {
       transition={{ duration: 0.75, ease: "easeInOut" }}
       exit={{ opacity: 0 }}
     >
-      <Box as="section" outline="0" tabIndex={-1} {...props} my="4em">
+      <Box
+        as="section"
+        outline="0"
+        tabIndex={-1}
+        {...props}
+        my="4em"
+        px={{ base: "0", md: "20", xl: "0" }}
+      >
         <Box mb="50px">
           <SectionHeader mr="16px">
             <Heading2>skills</Heading2>

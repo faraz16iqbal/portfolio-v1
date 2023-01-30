@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   useColorMode,
   useColorModeValue,
@@ -6,24 +6,25 @@ import {
   Flex,
   Spacer,
   Heading,
+  Box,
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon, SunIcon } from "@chakra-ui/icons";
-import { FaMoon } from "react-icons/fa";
+import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 import useColorSwitcher from "../../utils/useColorSwitcher";
 import { NavLink } from "./NavLink";
 import MobileNavLink from "./MobileNavLink";
-import { useEffect } from "react";
+
+import "./styles.css";
 
 const Navbar = props => {
   const text = useColorModeValue("dark", "light");
-  const SwitchIcon = useColorModeValue(FaMoon, SunIcon);
+  const SwitchIcon = useColorModeValue(MoonIcon, SunIcon);
   const { toggleColorMode } = useColorMode();
   const [display, changeDisplay] = useState("none");
   const [clicked, setClicked] = useState("false");
-  const { lightGreyBg } = useColorSwitcher();
+  const [boxClass, setBoxClass] = useState("");
+  const { lightGreyBg, colorDark } = useColorSwitcher();
 
   useEffect(() => {
-    console.log("here");
     changeDisplay("none");
   }, [clicked]);
 
@@ -61,13 +62,22 @@ const Navbar = props => {
           return <NavLink name={b.name} link={b.link} key={id} />;
         })}
       </Flex>
-      <IconButton
-        aria-label="Open Menu"
-        fontSize="xx-large"
-        icon={<HamburgerIcon />}
-        onClick={() => changeDisplay("flex")}
+      <Box
+        id="nav-icon2"
+        onClick={() => {
+          setBoxClass(prev => (prev === "" ? "open" : ""));
+          changeDisplay(prev => (prev === "flex" ? "none" : "flex"));
+        }}
+        className={boxClass}
         display={["flex", "flex", "flex", "none"]}
-      />
+      >
+        <Box as="span" background={colorDark}></Box>
+        <Box as="span" background={colorDark}></Box>
+        <Box as="span" background={colorDark}></Box>
+        <Box as="span" background={colorDark}></Box>
+        <Box as="span" background={colorDark}></Box>
+        <Box as="span" background={colorDark}></Box>
+      </Box>
       <Spacer />
       <IconButton
         fontSize="xx-large"
@@ -80,29 +90,19 @@ const Navbar = props => {
       />
 
       {/* Mobile Content */}
+
       <Flex
-        w="100vw"
-        display={display}
         bgColor={lightGreyBg}
-        zIndex={20}
-        h="50vh"
+        flexDir="column"
+        display={display}
+        w="100vw"
+        h="40vh"
         pos="fixed"
-        top="0"
+        top="20"
         left="0"
         overflowY="auto"
-        flexDir="column"
+        zIndex={20}
       >
-        <Flex justify="flex-start">
-          <IconButton
-            mt={4}
-            ml={5}
-            aria-label="Open Menu"
-            size="lg"
-            icon={<CloseIcon />}
-            onClick={() => changeDisplay("none")}
-          />
-        </Flex>
-
         <Flex flexDir="column" align="center">
           {buttons.map((b, id) => {
             return (
@@ -110,7 +110,10 @@ const Navbar = props => {
                 name={b.name}
                 link={b.link}
                 key={id}
-                onClick={() => setClicked(prev => prev ^ 1)}
+                onClick={() => {
+                  setClicked(prev => prev ^ 1);
+                  setBoxClass(prev => (prev === "" ? "open" : ""));
+                }}
               />
             );
           })}

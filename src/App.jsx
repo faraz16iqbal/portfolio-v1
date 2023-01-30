@@ -35,7 +35,9 @@ function App() {
       transition={{ duration: 1, ease: "easeInOut" }}
       exit={{ opacity: 0 }}
     >
-      <Container maxW={{ sm: "container.sm", xl: "container.xl" }}>
+      <Container
+        maxW={{ sm: "container.sm", md: "container.lg", lg: "container.xl" }}
+      >
         <Navbar />
         <AnimatedRoutes />
       </Container>

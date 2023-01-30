@@ -17,7 +17,11 @@ const Homepage = () => {
       transition={{ duration: 1, ease: "easeInOut" }}
       exit={{ opacity: 0 }}
     >
-      <Box as="div" mt={{ base: "4em", md: "8em" }}>
+      <Box
+        as="div"
+        mt={{ base: "4em", md: "8em" }}
+        px={{ base: "0", md: "20", xl: "0" }}
+      >
         <Flex justifyContent="center">
           <Box as="section" w="100%" textAlign={{ base: "center", md: "left" }}>
             <Flex
