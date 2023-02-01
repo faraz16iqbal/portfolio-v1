@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   useColorMode,
   useColorModeValue,
@@ -14,19 +14,15 @@ import { NavLink } from "./NavLink";
 import MobileNavLink from "./MobileNavLink";
 
 import "./styles.css";
+import { motion } from "framer-motion";
 
 const Navbar = props => {
   const text = useColorModeValue("dark", "light");
   const SwitchIcon = useColorModeValue(MoonIcon, SunIcon);
   const { toggleColorMode } = useColorMode();
-  const [display, changeDisplay] = useState("none");
-  const [clicked, setClicked] = useState("false");
+  const [clicked, setClicked] = useState(null);
   const [boxClass, setBoxClass] = useState("");
-  const { lightGreyBg, colorDark } = useColorSwitcher();
-
-  useEffect(() => {
-    changeDisplay("none");
-  }, [clicked]);
+  const { colorLight, colorDark } = useColorSwitcher();
 
   const buttons = [
     {
@@ -66,7 +62,9 @@ const Navbar = props => {
         id="nav-icon2"
         onClick={() => {
           setBoxClass(prev => (prev === "" ? "open" : ""));
-          changeDisplay(prev => (prev === "flex" ? "none" : "flex"));
+          console.log("clicked");
+          setClicked(prev => (prev === null ? 1 : prev ^ 1));
+          console.log(clicked);
         }}
         className={boxClass}
         display={["flex", "flex", "flex", "none"]}
@@ -91,34 +89,40 @@ const Navbar = props => {
 
       {/* Mobile Content */}
 
-      <Flex
-        bgColor={lightGreyBg}
-        flexDir="column"
-        display={display}
-        w="100vw"
-        h="40vh"
-        pos="fixed"
-        top="20"
-        left="0"
-        overflowY="auto"
-        zIndex={20}
+      <Box
+        as={motion.div}
+        initial={{ opacity: 0 }}
+        animate={clicked === 1 ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ duration: 0.75, ease: "easeInOut" }}
+        exit={{ opacity: 0 }}
       >
-        <Flex flexDir="column" align="center">
-          {buttons.map((b, id) => {
-            return (
-              <MobileNavLink
-                name={b.name}
-                link={b.link}
-                key={id}
-                onClick={() => {
-                  setClicked(prev => prev ^ 1);
-                  setBoxClass(prev => (prev === "" ? "open" : ""));
-                }}
-              />
-            );
-          })}
+        <Flex
+          bgColor={colorLight}
+          flexDir="column"
+          w="100vw"
+          h="45vh"
+          pos="fixed"
+          top="20"
+          left="0"
+          overflowY="auto"
+          zIndex={20}
+        >
+          <Flex flexDir="column" align="center">
+            {buttons.map((b, id) => {
+              return (
+                <MobileNavLink
+                  name={b.name}
+                  link={b.link}
+                  key={id}
+                  onClick={() => {
+                    setClicked(prev => (prev === null ? 1 : prev ^ 1));
+                  }}
+                />
+              );
+            })}
+          </Flex>
         </Flex>
-      </Flex>
+      </Box>
     </Flex>
   );
 };

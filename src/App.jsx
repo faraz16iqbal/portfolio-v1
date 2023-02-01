@@ -29,19 +29,21 @@ const AnimatedRoutes = () => {
 
 function App() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1, ease: "easeInOut" }}
-      exit={{ opacity: 0 }}
-    >
-      <Container
-        maxW={{ sm: "container.sm", md: "container.lg", lg: "container.xl" }}
+    <>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        exit={{ opacity: 0 }}
       >
-        <Navbar />
-        <AnimatedRoutes />
-      </Container>
-    </motion.div>
+        <Container
+          maxW={{ sm: "container.sm", md: "container.lg", lg: "container.xl" }}
+        >
+          <Navbar />
+          <AnimatedRoutes />
+        </Container>
+      </motion.div>
+    </>
   );
 }
 
