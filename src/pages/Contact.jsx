@@ -1,10 +1,12 @@
 import React from "react";
+
+import { motion } from "framer-motion";
 import { Box, Flex, Grid } from "@chakra-ui/react";
+
 import SectionHeader from "../components/miscellaneous/SectionHeader";
+
 import { PrimaryButton } from "../components/Buttons";
 import { Heading2, TextLarge } from "../components/Typography";
-import useColorSwitcher from "../utils/useColorSwitcher";
-import { motion } from "framer-motion";
 import IconBox from "../components/miscellaneous/IconBox";
 import {
   IconCF,
@@ -12,6 +14,9 @@ import {
   IconLeetcode,
   IconLinkedin,
 } from "../assets/icons";
+
+import useColorSwitcher from "../utils/useColorSwitcher";
+
 const Contact = ({ ...props }) => {
   const { secondary } = useColorSwitcher();
 

@@ -1,11 +1,17 @@
 import React from "react";
 
+import RobotModel from "../RobotModel";
+
+import { motion } from "framer-motion";
+
 import { Box, Center, Flex, Text } from "@chakra-ui/react";
-import useColorSwitcher from "../utils/useColorSwitcher";
 import { Body, Heading1, Heading3 } from "../components/Typography";
 import { PrimaryButton } from "../components/Buttons";
-import { CircleArray } from "../components/miscellaneous/CircleArray";
-import { motion } from "framer-motion";
+
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Float } from "@react-three/drei";
+
+import useColorSwitcher from "../utils/useColorSwitcher";
 
 const Homepage = () => {
   const { colorDark, secondary } = useColorSwitcher();
@@ -65,17 +71,20 @@ const Homepage = () => {
               </PrimaryButton>
             </Flex>
           </Box>
-          <Box>
-            <Center>
-              <CircleArray
-                strokeWidth="0.5px"
-                fill={secondary}
-                stroke={secondary}
-                boxSize={{ base: "15em", md: "22em" }}
-                display={{ base: "none", xl: "block" }}
-              />
-            </Center>
-          </Box>
+          <Center
+            width={{ lg: "20rem", xl: "30rem" }}
+            height={{ lg: "40rem", xl: "45rem" }}
+            display={{ base: "none", lg: "block" }}
+            mt="0"
+          >
+            <Canvas>
+              <OrbitControls />
+              <ambientLight />
+              <Float speed="4.0" floatIntensity="1.5">
+                <RobotModel />
+              </Float>
+            </Canvas>
+          </Center>
         </Flex>
       </Box>
     </motion.div>

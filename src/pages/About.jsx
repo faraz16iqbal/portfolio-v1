@@ -1,11 +1,17 @@
-import { Box, Stack } from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import React from "react";
+import React, { Suspense } from "react";
+
 import SectionHeader from "../components/miscellaneous/SectionHeader";
 import Bullet from "../components/miscellaneous/Bullet";
-import ProfileImage from "../components/miscellaneous/ProfileImage";
+
+import { Box, Spinner, Stack } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import { Body, Heading2, Heading3 } from "../components/Typography/index";
+
 import useColorSwitcher from "../utils/useColorSwitcher";
+
+const ProfileImage = React.lazy(() =>
+  import("../components/miscellaneous/ProfileImage")
+);
 
 const About = () => {
   const { lightGreyBg, greyBg } = useColorSwitcher();
@@ -50,7 +56,19 @@ const About = () => {
               placeItems="center"
               p={{ base: "8px", md: "16px" }}
             >
-              <ProfileImage />
+              <Suspense
+                fallback={
+                  <Spinner
+                    thickness="4px"
+                    speed="0.65s"
+                    emptyColor="gray.200"
+                    color="blue.500"
+                    size="xl"
+                  />
+                }
+              >
+                <ProfileImage />
+              </Suspense>
             </Box>
           </Box>
           <Stack spacing={{ sm: "8" }} p="8px" w={{ base: "100%", xl: "50%" }}>
