@@ -1,6 +1,13 @@
 import React from "react";
+
+import { motion } from "framer-motion";
 import { Box, Text, Grid } from "@chakra-ui/react";
+
 import SectionHeader from "../components/miscellaneous/SectionHeader";
+import IconBox from "../components/miscellaneous/IconBox";
+
+import { Heading2 } from "../components/Typography";
+
 import {
   IconC,
   IconFB,
@@ -15,10 +22,6 @@ import {
   IconDocker,
   IconFigma,
 } from "../assets/icons";
-import { Heading2 } from "../components/Typography";
-
-import IconBox from "../components/miscellaneous/IconBox";
-import { motion } from "framer-motion";
 
 const Skills = ({ ...props }) => {
   return (

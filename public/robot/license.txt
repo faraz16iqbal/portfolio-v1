@@ -1,0 +1,11 @@
+Model Information:
+* title:	Boogie Bot - Poppy Playtime
+* source:	https://sketchfab.com/3d-models/boogie-bot-poppy-playtime-54bb1b3081b248e39ff571de9d79d43b
+* author:	KissyMissyAndPJLover1221 (https://sketchfab.com/KissyMissyAndPJLover1221)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Boogie Bot - Poppy Playtime" (https://sketchfab.com/3d-models/boogie-bot-poppy-playtime-54bb1b3081b248e39ff571de9d79d43b) by KissyMissyAndPJLover1221 (https://sketchfab.com/KissyMissyAndPJLover1221) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

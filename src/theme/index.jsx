@@ -20,8 +20,13 @@ const customTheme = extendTheme({
         color: props.colorMode === "light" ? "default.dark" : "default.light",
         bg: props.colorMode === "light" ? "#fcfcfc" : "#232323",
         fontFamily: "body",
+        transitionProperty: "all",
+        transitionDuration: "normal",
       },
     }),
+  },
+  config: {
+    disableTransitionOnChange: false,
   },
   colors: {
     default: {

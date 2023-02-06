@@ -1,10 +1,13 @@
 import React from "react";
-import { Box, Flex } from "@chakra-ui/react";
-import { ProjectCard, ProjectInfoCard } from "../components/ProjectCard";
-import SectionHeader from "../components/miscellaneous/SectionHeader";
-import { Heading2 } from "../components/Typography/index";
+
 import { motion } from "framer-motion";
+import { Box, Flex } from "@chakra-ui/react";
+
+import SectionHeader from "../components/miscellaneous/SectionHeader";
 import ProjectsList from "../utils/ProjectsList";
+
+import { ProjectCard, ProjectInfoCard } from "../components/ProjectCard";
+import { Heading2 } from "../components/Typography/index";
 
 const Projects = ({ ...props }) => {
   return (
