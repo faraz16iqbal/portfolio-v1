@@ -62,9 +62,7 @@ const Navbar = props => {
         id="nav-icon2"
         onClick={() => {
           setBoxClass(prev => (prev === "" ? "open" : ""));
-          console.log("clicked");
           setClicked(prev => (prev === null ? 1 : prev ^ 1));
-          console.log(clicked);
         }}
         className={boxClass}
         display={["flex", "flex", "flex", "none"]}
